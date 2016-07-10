@@ -1,0 +1,37 @@
+application: {project name}
+version: production
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /bower_components/
+  static_dir: bower_components
+
+- url: /elements/
+  static_dir: elements
+
+- url: /images/
+  static_dir: images
+
+- url: /scripts/
+  static_dir: scripts
+
+- url: /styles/
+  static_dir: styles
+
+- url: /.*
+  static_files: 404.html
+  upload: 404.html
